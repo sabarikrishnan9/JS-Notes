@@ -1,28 +1,74 @@
 .left{
-   
-    height: 100%;
-    width: 50%;
-    background-color: aquamarine;
+  
+    width: 49%;
+    background-color: bisque;
     display: inline-block;
-
- 
+    padding-top: 300px;  
+    padding-bottom: 245px;
+    margin-left: 10px;
+    
 }
-
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{
+    overflow: hidden;}
+.email{
+    width: 275px;
+    margin-bottom: 15px;
+}
+.password{
+    width: 275px;
+    margin-bottom: 30px;
+}
 .right{
     display: inline-block;
-    
+    background-color: rgb(251, 245, 250);
     height: 100%;
-   
+    width: 48%;
+    padding-top: 300px;
+    padding-bottom: 10%;
+    margin-top: 15px;
+    margin-right: 25px;
     
-
 }
 
 .learning{
     color: blueviolet;
+    display: block;
+
 }
+.you-will{
+    width: 100px;
+    font-size: small;
+}
+
 .broad-lines{
     width: 10px;
     font-size: 25px;
+    
+
+
+   
+}
+
+.right-pad{
+    background-color: rgb(253, 246, 252);
+    margin-top: 20px;
+    margin-left: 170px;
+    margin-bottom: 50px;
+    margin-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+
+}
+
+.Enter-the{
+    color: grey;
+    font-size: small;
+   
 }
 
 .below-login{
@@ -38,20 +84,22 @@
 }
 .signin{
     display: block;
-    padding-left: 73px;
-    padding-right: 73px;
+    padding-left: 84px;
+    padding-right: 84px;
     padding-top: 8px;
     padding-bottom: 8px;
     border: none;
     color: white;
     background-color: rgb(10, 136, 194);
     border-radius: 3px;
+    position: relative;
+   
 }
 
 .log-in{
     margin-top: 10px;
-    padding-left: 125px;
-    padding-right: 125px;
+    padding-left: 128px;
+    padding-right: 128px;
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: aquamarine;
@@ -62,4 +110,25 @@
 
 .or{
     vertical-align: middle;
+}
+
+.left-pad{
+    background-color: rgb(232, 190, 220);
+    padding-left: 50px;
+    padding-right: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    width:200px;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+}
+
+.check-box{
+    margin-top: 5px;
+}
+
+.Forgot-password{
+    margin-left: 35px;
 }
