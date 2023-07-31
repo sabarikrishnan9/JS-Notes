@@ -1,0 +1,65 @@
+.left{
+   
+    height: 100%;
+    width: 50%;
+    background-color: aquamarine;
+    display: inline-block;
+
+ 
+}
+
+.right{
+    display: inline-block;
+    
+    height: 100%;
+   
+    
+
+}
+
+.learning{
+    color: blueviolet;
+}
+.broad-lines{
+    width: 10px;
+    font-size: 25px;
+}
+
+.below-login{
+    width: 130px;
+  
+    margin-top: 15px;
+
+    display: inline-block;
+
+    vertical-align: middle;
+  
+    
+}
+.signin{
+    display: block;
+    padding-left: 73px;
+    padding-right: 73px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    color: white;
+    background-color: rgb(10, 136, 194);
+    border-radius: 3px;
+}
+
+.log-in{
+    margin-top: 10px;
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+.or{
+    vertical-align: middle;
+}
