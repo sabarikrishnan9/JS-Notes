@@ -480,6 +480,23 @@ REVERSE
 arr.reverse
 
 
+-------------------------------------------------------------------------------------------
+
+dot notation  vs square notation 
+
+[] this has the advantage of having numbers as the key value acces with this [] but not with . operator
+
+It there is space betweeen the key name we canot use dot operator.
+
+we can store the key value in the variable and use the squrae operator to access it 
+
+ex:- 
+	var  sub = English;
+
+		obj["mark"][sub];
+
+	It gets the value of the particular of the key in the object.
+
 
 
 
