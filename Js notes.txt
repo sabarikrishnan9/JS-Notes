@@ -1,0 +1,490 @@
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  JAVASCRIPT   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+--------------------------
+
+///TYPE COERCION ///
+
+let x ='8';
+
+x=x-2;
+
+string + number = string;
+
+string - number = number;
+
+if we use subraction operator convert into number.
+
+
+Other way is 
+
+adding prefix(+)
+	
+   ex:- x = +x;
+
+converting number to boolean 
+
+x = !x;
+
+console.log(x,typeod x);
+
+op:- false boolean
+
+only number 0 is false all the others are true.
+
+console.log(boolean(null));
+
+op:- false.
+
+
+
+parseInt is used to fetch only the number in the string 
+
+condition 1: first character should be number.
+
+--------------------------------------------------------
+
+/// TEMPLATE LITERAL ///
+
+let num1=7;
+
+let num2=4;
+
+let result = num1+num2;
+
+console.log(`The addition of ${num1} and ${num2} is ${result}`);
+
+we can print in the next line with out using /n by just typing in the next lines but with in the `` these quoates.
+
+---------------------------
+
+/// LOOPING ///
+
+let i =1;
+
+while(i>5)
+{
+	console.log(i);
+	i--;
+}
+
+
+for(;i<=5;)
+{
+console.log("Hi",i);
+i++;
+}
+
+
+
+While vs For ?
+
+If we know starting point and ending value For loop is the best.
+
+we cannot use the for loop in 
+
+
+For in loop
+^^^^^^^^^^^
+it is only used to traverse the objects
+
+for(let x in obj1)
+{
+
+console.log(x);	// in this x only has the key value
+console.log(obj[x]);// only values
+		
+}
+
+--------------------------
+
+
+/// FUNCTIONS  ///	
+
+function greet()
+{
+console.log('Hello world');
+}
+
+greet();
+
+--> In js treat function as a object .
+
+let add = function(num1,num2) 		// anonymous function
+{
+return num1+num2;
+
+}
+
+let sum = add;
+
+let result = add(5,6);
+
+
+It is function expression.
+--------------------------
+
+let alien={};
+
+console.log(typeof alien);
+
+-------------------------
+
+let object = {
+
+	name : 'sabari',
+	age : 18,
+	anuual income : 3.6,
+	monthly income": function(){
+			let ai=+this.annualincome;
+			return ai/12;
+	}
+}
+
+
+---------------------------------------------------------------------------------------------
+
+////object inside the object ////
+
+let obj1= {
+		name:'sabari',
+		training : 'front-end-training';
+		address : {
+				state : 'tamilnadu',
+				district : 'coimbatore',
+				pincode : 641402;
+			  }
+
+conlose.log(obj1.address.pincode);
+
+--> if we want to check wheather object is present or not we should use === operator to check 
+
+	ex: if(obj1.address.pincode!==undefined)
+
+
+-->  (?.) used to avoid the error returns undefined instead of error if the object is not present.
+
+	ex: obj1?.address?.pincode
+-----------------------------------------------------------------------------------------------------
+
+///deleting properties in the object ///
+
+ex: delete.obj1.address.pincode;
+
+
+
+------------------------------------
+
+
+let text='sabari';
+
+let length = txt.length;
+
+-----------------------------------
+
+const sumarr = (arr) =>
+   {	
+	
+	let sum=0; 
+	
+	for(let x of arr)
+	{const sum=sum+x;}
+
+	return {sum};
+    }
+
+
+const arr=['1','2','3','4'];
+
+sumarr(arr);
+
+------------------------------------------
+
+
+Frequency of Each letters
+
+const letterfrequency = (phrase) =>
+{
+    for(const letter of phrase)
+	{
+
+	 console.log(letter)
+	}
+}
+
+----------------------------------------------
+
+
+const frequencyOfLetters = (string) => {
+
+     let frequency = {};
+
+    for(let letter of string)
+    {
+       if(letter in frequency)
+         {    
+            frequency[letter]++;
+        }
+       else
+         {
+        frequency[letter] = 1;
+           }
+    }
+
+    rerturn {frequency };
+} 
+console.log(freqyencyOfLetters('Hi,there'));
+
+---------------------------------------------
+
+frequency of words
+
+
+
+console.log(frequencyOfWords('Sabari Krishnan M');
+
+const frequencyOfWords = (string) =>
+{
+    
+    frequecny={};
+    let arr=string.split(' ');
+
+	for(let x of arr)
+	{
+		if(x present in frequency)
+		{
+		   frequency[x]++;
+		}
+		else
+		{
+		   frequecy[x]=1;
+		}
+	}
+	
+	return frequency;
+}
+
+
+--------------------------------------------------
+
+
+/// HOISTING ///
+
+A variable can be used before it is been declared.
+
+
+function add(num1,num2,num3=1)  // assigning default value to the variable
+{
+	let sum=num1+num2+num3;
+
+	return sum;
+}
+
+console.log(add(5,6)) // here we are assigning only two values to the variable
+
+
+if no value assigned to the num3 then it will assume as undefined a
+
+op will be NaN (Not a Number)
+
+-----------------------------------------------------
+
+
+/// ARROW FUNCTION
+
+function is behaviour.
+
+If only one statement in the arrow function it returns implicitly
+
+let greet = function() => {  // function is not necessary [let greet = () => {]
+
+	return('Morning');
+	}
+
+condole.log(greet());
+
+
+------------------------------------------------------------
+
+/// THIS KEYWORD /// 	
+
+
+--> Behaviour of the function in the object is called method
+
+--> THIS is used to fetch the value of the property from the parent object
+
+
+
+ex:-
+	let laptop = {
+			name:lenovo,
+			cpu: intel,
+			processor:i9,
+			config:function(){
+				console.log(this.processor,this.cpu);
+				}
+			}
+
+	laptop.config();
+
+
+/// Constructor Function ///
+
+
+
+function Alien(name,tech)
+{
+	this.name=name;
+	this.tech=tech;
+}
+
+
+
+let alien1 =new Alien('Sabari','Js');
+
+console.log(alien1);
+
+op: name:sabari,tech:Js
+
+--------------------------------------------------------------------------------------
+
+
+	///ARRAY///
+
+
+let values=[];
+
+values.push(5);
+
+console.log(value);
+
+console.log(value[2]);
+
+	
+FILTER
+^^^^^^
+
+const items = [{name:'Bike',Price:1000},{name:'car',price:3000},]
+
+
+const filtereditems=items.filter((item) => {
+
+	return item.prince>500;
+});
+
+MAP
+^^^
+
+const itemNames=items.map((item) => {
+
+	return items.name;
+
+});
+
+
+FIND
+^^^^
+
+const findItems = items.find((item){
+
+	return items.name==Bike;
+
+});
+
+op:- name:Bike,Price:1000
+	
+
+
+forEach --> Similar to for loop , no return type
+^^^^^^^
+
+items.forEach((item){
+
+consol.log(item);
+});
+
+SYNTAX : array.forEach((parameter) => {
+	
+	console.log(parameter.property(key value);		
+	
+	}
+
+
+SOME
+^^^^
+
+it checks for the " SOME" items satidfies the condition present or not returns boolean values
+
+
+EVERY
+^^^^^
+
+it checks for the "EVERY" items satidfies the condition present or not returns boolean values
+
+
+REDUCE
+^^^^^^
+
+const total = items.reduce((currentTotal,item) => {
+
+	return item.price + currentTotal;
+},0);
+
+returns the single value
+
+
+INCLUDES
+^^^^^^^^
+
+
+const items = [1,2,3,4,5];
+
+presentOrnor=items.includes(8);
+
+console.log(presentOrnot);
+
+op:- false 
+
+
+SHIFT
+^^^^^
+removes the first item in the array
+
+UNSHIFT
+^^^^^^^
+
+inverse of shift 
+
+addes the element at first.
+
+CONCAT
+^^^^^^
+
+adds the two array and store in the other array.
+
+
+JOIN
+^^^^
+
+Takes the array and convert into the string   in the commas present in the array.
+
+
+const newarr = arr.join('|')
+
+replaces the comma with '|' this
+
+REVERSE
+^^^^^^^
+
+arr.reverse
+
+
+
+
+
+
+
+
+
+
